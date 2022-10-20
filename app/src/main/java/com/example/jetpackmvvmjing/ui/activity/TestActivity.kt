@@ -1,0 +1,42 @@
+package com.example.jetpackmvvmjing.ui.activity
+
+import android.os.Bundle
+import androidx.activity.viewModels
+import com.example.jetpackmvvmjing.databinding.ActivityTestBinding
+import com.example.jetpackmvvmjing.ui.adapter.TestAdapter
+import com.example.jetpackmvvmjing.viewmodel.request.RequestLoginRegisterViewModel
+import me.hgj.jetpackmvvm.base.viewmodel.BaseViewModel
+import me.hgj.jetpackmvvm.demo.app.base.BaseActivity
+import me.hgj.jetpackmvvm.ext.util.logd
+
+/**
+ * @author : hgj
+ * @date   : 2020/8/26
+ */
+
+class TestActivity : BaseActivity<BaseViewModel, ActivityTestBinding>() {
+
+    val viewModel: RequestLoginRegisterViewModel by viewModels()
+
+    val adapter: TestAdapter by lazy { TestAdapter(arrayListOf()) }
+
+
+    override fun initView(savedInstanceState: Bundle?) {
+
+        //强烈注意：使用addLoadingObserve 将非绑定当前activity的viewmodel绑定loading回调 防止出现请求时不显示 loading 弹窗bug
+        addLoadingObserve(viewModel)
+
+        adapter.run {
+            clickAction = { position, item, state ->
+                "海王收到了点击事件，并准备发一个红包".logd()
+            }
+        }
+
+    }
+
+    override fun createObserver() {
+
+
+    }
+}
+

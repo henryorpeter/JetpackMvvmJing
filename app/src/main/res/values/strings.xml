@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JetpackMvvmJing</string>
+    <string name="error_occurred">不好意思App翻车了。\n请拿已复制好的错误日志去啪啪啪得打作者的脸</string>
+    <string name="bottom_name1">首页</string>
+    <string name="bottom_name2">项目</string>
+    <string name="bottom_name3">广场</string>
+    <string name="bottom_name4">公众号</string>
+    <string name="bottom_name5">我的</string>
+</resources>
