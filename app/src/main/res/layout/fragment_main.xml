@@ -15,8 +15,8 @@
             android:layout_weight="1"
             android:id="@+id/mainViewpager"
             />
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/nav_main"
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/mainBottom"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/white"

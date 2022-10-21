@@ -10,4 +10,57 @@
         android:label="HomeFragment">
 
     </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.jetpackmvvmjing.ui.fragment.login.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFrgment"
+            app:destination="@id/registerFrgment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFrgment"
+        android:name="com.example.jetpackmvvmjing.ui.fragment.login.RegisterFrgment"
+        android:label="RegisterFrgment">
+
+        <action
+            android:id="@+id/action_registerFrgment_to_mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mainfragment" />
+
+        <action
+            android:id="@+id/action_registerFrgment_to_loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment" />
+
+<!--        <action-->
+<!--            android:id="@+id/action_registerFrgment_to_searchResultFragment"-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right"-->
+<!--            app:popUpTo="@id/searchResultFragment" />-->
+
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_loginFragment"
+        app:destination="@id/loginFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
 </navigation>
