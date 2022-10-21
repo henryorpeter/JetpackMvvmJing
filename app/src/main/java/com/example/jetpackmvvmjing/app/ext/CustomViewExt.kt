@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.inputmethod.InputMethodManager
@@ -370,14 +371,14 @@ fun BottomNavigationViewEx.init(navigationItemSelectedAction: (Int) -> Unit): Bo
  * @receiver BottomNavigationViewEx
  * @param ids IntArray
  */
-//fun BottomNavigationViewEx.interceptLongClick(vararg ids:Int) {
-//    val bottomNavigationMenuView: ViewGroup = (this.getChildAt(0) as ViewGroup)
-//    for (index in ids.indices){
-//        bottomNavigationMenuView.getChildAt(index).findViewById<View>(ids[index]).setOnLongClickListener {
-//            true
-//        }
-//    }
-//}
+fun BottomNavigationViewEx.interceptLongClick(vararg ids:Int) {
+    val bottomNavigationMenuView: ViewGroup = (this.getChildAt(0) as ViewGroup)
+    for (index in ids.indices){
+        bottomNavigationMenuView.getChildAt(index).findViewById<View>(ids[index]).setOnLongClickListener {
+            true
+        }
+    }
+}
 
 /**
  * 隐藏软键盘

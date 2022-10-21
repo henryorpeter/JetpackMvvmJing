@@ -6,6 +6,7 @@ import com.example.jetpackmvvmjing.R
 import com.example.jetpackmvvmjing.app.appViewModel
 import com.example.jetpackmvvmjing.app.ext.init
 import com.example.jetpackmvvmjing.app.ext.initMain
+import com.example.jetpackmvvmjing.app.ext.interceptLongClick
 import com.example.jetpackmvvmjing.app.ext.setUiTheme
 import com.example.jetpackmvvmjing.databinding.FragmentMainBinding
 import com.example.jetpackmvvmjing.viewmodel.state.MainViewModel
@@ -30,7 +31,7 @@ class MainFragment : BaseFragment<MainViewModel, FragmentMainBinding>() {
                 R.id.menu_me -> mainViewpager.setCurrentItem(2, false)
             }
         }
-//        mainBottom.interceptLongClick(R.id.menu_main,R.id.menu_project,R.id.menu_system,R.id.menu_public,R.id.menu_me)
+        mainBottom.interceptLongClick(R.id.menu_main,R.id.menu_project,R.id.menu_me)//拦截BottomNavigation长按事件 防止长按时出现Toast
     }
 
     override fun createObserver() {
