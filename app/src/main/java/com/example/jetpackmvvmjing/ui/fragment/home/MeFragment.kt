@@ -22,10 +22,9 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>() {
     }
 
     inner class ProxyClick {
-        /** 登录 */
+        /** 登NM录 */
         fun login() {
             nav().jumpByLogin {}
         }
     }
-
 }

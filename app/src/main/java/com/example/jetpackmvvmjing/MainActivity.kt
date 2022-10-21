@@ -65,6 +65,4 @@ class MainActivity : BaseActivity1<MainViewModel,ActivityMainBinding>() {
             Toast.makeText(applicationContext, "我特么怎么断网了!", Toast.LENGTH_SHORT).show()
         }
     }
-
-
 }

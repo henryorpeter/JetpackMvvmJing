@@ -124,6 +124,8 @@ dependencies {
     implementation 'cat.ereza:customactivityoncrash:2.3.0'
     //底部bottomBar
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    //红点依赖
+    implementation 'q.rorbin:badgeview:1.1.0'
     //指示器库
     implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
 }

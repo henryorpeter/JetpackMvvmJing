@@ -24,6 +24,7 @@
             app:itemIconTint="@color/bottom_selector"
             app:itemTextColor="@color/bottom_selector"
             app:itemIconSize="20dp"
+            app:itemBackground="@color/white"
             />
     </LinearLayout>
 </layout>
