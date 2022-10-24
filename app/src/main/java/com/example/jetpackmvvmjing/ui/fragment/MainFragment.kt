@@ -36,6 +36,7 @@ class MainFragment : BaseFragment<MainViewModel, FragmentMainBinding>() {
                 R.id.menu_me -> mainViewpager.setCurrentItem(2, false)
             }
         }
+        mainBottom.enableAnimation(false);//去掉页面跳转缩放动画-*-
         mainBottom.interceptLongClick(R.id.menu_main,R.id.menu_project,R.id.menu_me)//拦截BottomNavigation长按事件 防止长按时出现Toast
         setBadge()
     }
@@ -61,7 +62,7 @@ class MainFragment : BaseFragment<MainViewModel, FragmentMainBinding>() {
         itemView.addView(badgeView)
         //获取子view并设置显示数目
         val count = badgeView.findViewById<TextView>(R.id.tv_badge)
-        count.text = "2"
+        count.text = "99"
 
         //不显示则隐藏
 //        count.visibility= View.GONE
